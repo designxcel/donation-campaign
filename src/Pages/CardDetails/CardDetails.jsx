@@ -16,15 +16,15 @@ const CardDetails = () => {
     //     const detailCard = cards?.find(card => card.id === id);
     //     setCard(detailCard);
     // },[id, cards])
-    const { image, title, category,category_bg,card_bg,desc,donation } = card || {};
+    const { image, title, category,category_bg,card_bg,desc,donate } = card || {};
 
     const handleDonation = () =>{
 
         const addedDonatedAmount = [];
-        const donatedAmount = JSON.parse(localStorage.getItem('donation'))
+        const donatedAmount = JSON.parse(localStorage.getItem('donations'))
         if(!donatedAmount){
             addedDonatedAmount.push(card);
-            localStorage.setItem('donation', JSON.stringify(addedDonatedAmount))
+            localStorage.setItem('donations', JSON.stringify(addedDonatedAmount))
             swal("Good job!", "You clicked the button!", "success"); 
         }
         else{
@@ -32,7 +32,7 @@ const CardDetails = () => {
             const isExist = donatedAmount.find((card) => card.id ===idInt);
             if(!isExist){
                 addedDonatedAmount.push(...donatedAmount,card);
-            localStorage.setItem('donation', JSON.stringify(addedDonatedAmount))
+            localStorage.setItem('donations', JSON.stringify(addedDonatedAmount))
             swal("Good job!", "You clicked the button!", "success");  
             }
             else{
@@ -51,7 +51,7 @@ const CardDetails = () => {
                 </div>
                 <div className='mt-[-40px] pl-14'>
                 
-                    <button onClick={handleDonation}>Donate ${donation}</button>
+                    <button onClick={handleDonation}>Donate ${donate}</button>
                 </div>
                 <div className="p-6 text-justify">
                     <h4 className="font-sans text-2xl font-semibold tracking-normal text-blue-gray-900">
