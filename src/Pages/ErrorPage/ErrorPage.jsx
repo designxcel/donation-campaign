@@ -1,9 +1,10 @@
 import React from 'react';
+import errorLogo from "../ErrorPage/error.png";
 
 const ErrorPage = () => {
     return (
         <div>
-            <h2>Page Not Found</h2>
+            <img src={errorLogo} alt="" />
         </div>
     );
 };

@@ -12,6 +12,7 @@ const DonationCards = ({donationCards}) => {
                     donationCards.map(card => <Card key={card.id} card={card}></Card>)
                 }
             </div>
+            
         </div>
     );
 };

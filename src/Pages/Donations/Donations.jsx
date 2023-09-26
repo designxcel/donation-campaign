@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Donation from "./Donation";
+import { Link } from "react-router-dom";
 
 
 
@@ -55,7 +56,15 @@ const Donations = () => {
                             }
                             
                         </div>
+                        <div>
+                        <Link to={"/"}>
+                        <button className="btn btn-primary">Go Back to Homepage</button>
+                        </Link>
+                        
                     </div>
+                    </div>
+
+                  
                     
                 </div>
             }

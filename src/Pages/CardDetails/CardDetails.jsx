@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useLoaderData, useParams } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 import swal from 'sweetalert';
 
 
@@ -65,9 +65,22 @@ const CardDetails = () => {
                     <p className="mt-3 block font-sans text-xl font-normal leading-relaxed text-gray-700 antialiased">
                     {desc}
                     </p>
+                    
+                    <div className='flex justify-center items-center mt-10 gap-5'>
+                        <Link to={"/"}>
+                        <button className="btn btn-primary">Go Back to Homepage</button>
+                        </Link>
+
+                        <Link to={"/donations"}>
+                        <button className="btn btn-primary">See the Donations page</button>
+                        </Link>
+                        
+                    </div>
                 </div>
                 </div>
             </div>
+           
+            
         </div>
     );
 };
