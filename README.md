@@ -1,8 +1,8 @@
-# React + Vite
+# Assignment 8
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. Added every donated category according to figma. give them different color through dynamically.
+2. showing data successfully in donation tab. A delete button has added. also shown see more/ see less button there.
+3. installed popup using sweet alert.
+4. added error message.
+5. also have data validation option.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

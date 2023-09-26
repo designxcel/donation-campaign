@@ -44,8 +44,8 @@ const CardDetails = () => {
     return (
         <div>
             
-            <div className=" flex justify-center items-center h-[70vh] md:w-[700px] mx-auto mt-[150px]">
-                <div>
+            <div className=" flex justify-center items-center h-[70vh] md:w-[700px] mx-auto ">
+                <div className='mt-[350px]'>
                 <div className="flex justify-center">
                 <img className='md:h-[400px] md:w-[700px]' src={donation_details_img} alt="" />
                 </div>

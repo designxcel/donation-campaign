@@ -2,7 +2,6 @@ const Banner = () => {
     return (
         <div>
           
-          
             <div
           className="hero h-[70vh] bg-slate-200 bg-blend-screen"
           style={{

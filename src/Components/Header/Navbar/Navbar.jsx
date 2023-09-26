@@ -7,8 +7,9 @@ import Banner from "./Banner";
 const Navbar = () => {
   return (
     <div>
-      <div className="">
-        <nav className="flex justify-between items-center mb-10 px-4">
+      <div>
+        <nav className="flex flex-col md:flex-row justify-between items-center mb-10 px-4">
+          {/* <div></div> */}
           <Logo></Logo>
           <ul className="flex gap-10 text-lg">
             <li>
