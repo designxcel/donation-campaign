@@ -1,29 +1,44 @@
 import React from 'react';
 
 const Donation = ({donation}) => {
-    const{image, title, category, donate} = donation;
+    const{image, title, category, donate, card_bg, category_bg, text_category_color} = donation;
+
+    const cardBg = {
+        backgroundColor : card_bg
+      }
+    
+      const cardCategory = {
+        backgroundColor : category_bg,
+        color : text_category_color
+      }
+    
+      const textColor = {
+        color : text_category_color
+      }
     return (
         <div>
-            <div className="relative flex w-full max-w-[48rem] mb-10 flex-row rounded-xl bg-clip-border text-gray-700 shadow-md">
-                <div className="relative m-0 w-2/5 shrink-0 overflow-hidden rounded-xl rounded-r-none bg-white bg-clip-border text-gray-700">
+            <div style={cardBg} className="relative flex w-full mb-10 flex-row rounded-xl shadow-md">
+                <div className="flex justify-center items-center rounded-xl rounded-r-none ">
                     <img
                     src={image}
                     alt="image"
-                    className="h-56 w-56 object-cover"
+                    className="h-56 w-56 object-cover rounded-xl ml-2"
                     />
                 </div>
                 <div className="p-6">
-                    <h6 className="mb-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
+                    <h6 style={cardCategory} className="w-24 text-center py-2 rounded-lg font-semibold">
                     {category}
                     </h6>
-                    <h4 className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
+                    <h4 style={textColor} className="mb-2 text-2xl font-semibold">
                     {title}
                     </h4>
-                    <p className="mb-8 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
-                    {donate}
+                    <p style={textColor} className="mb-8 block font-sans text-base font-normal ">
+                    ${donate}
                     </p>
                 
-                    <button className='btn btn-primary'>
+                    <button 
+                    style={cardBg}
+                    className='py-2 px-4 rounded-lg font-bold text-black'>
                       View Details
                     </button>
                     

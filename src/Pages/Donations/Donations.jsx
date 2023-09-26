@@ -25,9 +25,9 @@ const Donations = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
                         {
                             isShowing ? 
-                            donations.map(donation => <Donation donation={donation}></Donation>)
+                            donations?.map(donation => <Donation donation={donation}></Donation>)
                             :
-                            donations.slice(0,4).map(donation => <Donation donation={donation}></Donation>)
+                            donations?.slice(0,4).map(donation => <Donation donation={donation}></Donation>)
                         }
                     </div>
                     <div>

@@ -16,7 +16,7 @@ const CardDetails = () => {
     //     const detailCard = cards?.find(card => card.id === id);
     //     setCard(detailCard);
     // },[id, cards])
-    const { image, title, category,category_bg,card_bg,desc,donate } = card || {};
+    const { image, title,donation_details_img, category,category_bg,card_bg,desc,donate,text_category_color } = card || {};
 
     const handleDonation = () =>{
 
@@ -41,17 +41,25 @@ const CardDetails = () => {
             
         }
     }
+    const btnColor ={
+        backgroundColor : text_category_color
+    }
     return (
         <div>
             
-            <div className=" flex justify-center items-center h-[80vh] w-[700px] mx-auto">
+            <div className=" flex justify-center items-center h-[70vh] w-[700px] mx-auto mt-[150px]">
                 <div>
                 <div className="flex justify-center">
-                <img className='h-[400px] w-auto' src={image} alt="" />
+                <img className='h-[400px] w-[700px]' src={donation_details_img} alt="" />
                 </div>
-                <div className='mt-[-40px] pl-14'>
-                
-                    <button onClick={handleDonation}>Donate ${donate}</button>
+                <div className='relative flex justify-left mt-[-80px] items-center pl-14 bg-black h-20 bg-opacity-50'>
+                    
+                        
+                        <button
+                        className='text-white font-semibold py-2 px-4 rounded-lg'
+                        style={btnColor}
+                        onClick={handleDonation}>Donate ${donate}</button>
+                    
                 </div>
                 <div className="p-6 text-justify">
                     <h4 className="font-sans text-2xl font-semibold tracking-normal text-blue-gray-900">
