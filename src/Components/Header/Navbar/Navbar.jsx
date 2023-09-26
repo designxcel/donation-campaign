@@ -56,7 +56,7 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        {/* <Banner></Banner> */}
+        
       </div>
     </div>
   );

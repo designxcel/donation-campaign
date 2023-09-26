@@ -30,7 +30,7 @@ const Donations = () => {
                             donations?.slice(0,4).map(donation => <Donation donation={donation}></Donation>)
                         }
                     </div>
-                    <div>
+                    <div className="flex justify-center items-center">
                          <button className="btn btn-primary" onClick={() => setIsShowing(!isShowing)}>
                             {isShowing ? "see less" : "see all"}
                             </button>

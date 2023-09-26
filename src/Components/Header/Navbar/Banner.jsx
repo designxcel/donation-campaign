@@ -1,18 +1,23 @@
 
 
+
 const Banner = () => {
     return (
         <div>
+          
+          
             <div
-          className="hero h-[70vh]"
+          className="hero h-[70vh] bg-slate-200 bg-blend-screen"
           style={{
             backgroundImage: "url(https://i.ibb.co/GRbqjBk/BG.png)",
           }}
         >
-          <div className="hero-overlay bg-opacity-60"></div>
+          
           <div className="hero-content text-center text-neutral-content">
+            
+          
             <div className="">
-              <h1 className="mb-5 text-5xl font-bold ">
+              <h1 className=" text-black mb-5 text-5xl font-bold ">
                 I Grow By Helping People In Need
               </h1>
               <form>
