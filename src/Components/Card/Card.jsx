@@ -19,16 +19,17 @@ const Card = ({ card }) => {
     <div>
       <Link to={`/cards/${id}`}>
       <div style={cardBg}
-      className="relative h-96 flex gap-5 flex-col rounded-xl bg-clip-border shadow-md">
-        <div className=" m-0  rounded-none bg-transparent bg-clip-border text-gray-700 shadow-none">
+      className="relative h-96 m-5 rounded-xl shadow-md">
+        <div className="bg-transparent shadow-none">
           <img
+            className="w-full"
             src={image}
             alt="Clean water for children"
           />
 
         </div>
-        <div className="p-6">
-            <h3 style={cardCategory} className="w-1/3 text-center py-2 rounded-lg font-semibold">{category}</h3>
+        <div className="p-6 mt-3">
+            <h3 style={cardCategory} className="w-[100px] text-center py-2 rounded-lg font-semibold">{category}</h3>
           <h4 style={textColor} className="font-sans text-2xl font-semibold">
             {title}
           </h4>

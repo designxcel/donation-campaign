@@ -12,10 +12,7 @@ const CardDetails = () => {
     const idInt = parseInt (id);
     const card = cards.find((card) =>card.id ===idInt);
     
-    // useEffect(()=>{
-    //     const detailCard = cards?.find(card => card.id === id);
-    //     setCard(detailCard);
-    // },[id, cards])
+    
     const { image, title,donation_details_img, category,category_bg,card_bg,desc,donate,text_category_color } = card || {};
 
     const handleDonation = () =>{
@@ -25,7 +22,7 @@ const CardDetails = () => {
         if(!donatedAmount){
             addedDonatedAmount.push(card);
             localStorage.setItem('donations', JSON.stringify(addedDonatedAmount))
-            swal("Good job!", "You clicked the button!", "success"); 
+            swal("Good job!", "Have successfully Donated!", "success"); 
         }
         else{
 
@@ -33,10 +30,10 @@ const CardDetails = () => {
             if(!isExist){
                 addedDonatedAmount.push(...donatedAmount,card);
             localStorage.setItem('donations', JSON.stringify(addedDonatedAmount))
-            swal("Good job!", "You clicked the button!", "success");  
+            swal("Good job!", "Have successfully Donated!", "success");  
             }
             else{
-                swal("Oops!", "You clicked the button!", "error"); 
+                swal("Oops!", "You already donated Here! Try another Campaign!", "error"); 
             }
             
         }
@@ -47,10 +44,10 @@ const CardDetails = () => {
     return (
         <div>
             
-            <div className=" flex justify-center items-center h-[70vh] w-[700px] mx-auto mt-[150px]">
+            <div className=" flex justify-center items-center h-[70vh] md:w-[700px] mx-auto mt-[150px]">
                 <div>
                 <div className="flex justify-center">
-                <img className='h-[400px] w-[700px]' src={donation_details_img} alt="" />
+                <img className='md:h-[400px] md:w-[700px]' src={donation_details_img} alt="" />
                 </div>
                 <div className='relative flex justify-left mt-[-80px] items-center pl-14 bg-black h-20 bg-opacity-50'>
                     

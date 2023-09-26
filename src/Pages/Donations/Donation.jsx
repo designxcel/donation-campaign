@@ -11,6 +11,7 @@ const Donation = ({donation}) => {
         backgroundColor : category_bg,
         color : text_category_color
       }
+      
     
       const textColor = {
         color : text_category_color
@@ -18,21 +19,21 @@ const Donation = ({donation}) => {
     return (
         <div>
             <div style={cardBg} className="relative flex w-full mb-10 flex-row rounded-xl shadow-md">
-                <div className="flex justify-center items-center rounded-xl rounded-r-none ">
+                <div className="flex justify-center items-center">
                     <img
                     src={image}
                     alt="image"
-                    className="h-56 w-56 object-cover rounded-xl ml-2"
+                    className="h-56 w-56 object-cover rounded-l-xl"
                     />
                 </div>
                 <div className="p-6">
-                    <h6 style={cardCategory} className="w-24 text-center py-2 rounded-lg font-semibold">
+                    <h6 style={cardCategory} className="w-24 text-center py-2 rounded-lg font-bold">
                     {category}
                     </h6>
-                    <h4 style={textColor} className="mb-2 text-2xl font-semibold">
+                    <h4 className="mb-2 text-2xl font-semibold">
                     {title}
                     </h4>
-                    <p style={textColor} className="mb-8 block font-sans text-base font-normal ">
+                    <p style={textColor} className="mb-8 text-lg font-bold ">
                     ${donate}
                     </p>
                 
@@ -44,7 +45,7 @@ const Donation = ({donation}) => {
                     
                 </div>
             </div>
-
+            
             
         </div>
     );
