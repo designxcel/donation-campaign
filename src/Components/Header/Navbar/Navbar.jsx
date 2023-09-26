@@ -3,6 +3,7 @@ import Logo from "./Logo";
 import BG from "../Navbar/BG.png";
 import Banner from "./Banner";
 
+
 const Navbar = () => {
   return (
     <div>
@@ -56,7 +57,6 @@ const Navbar = () => {
             </li>
           </ul>
         </nav>
-        
       </div>
     </div>
   );

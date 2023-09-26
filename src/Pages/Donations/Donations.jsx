@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Donation from "./Donation";
-import swal from "sweetalert";
+
 
 
 const Donations = () => {
