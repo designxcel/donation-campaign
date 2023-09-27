@@ -3,7 +3,7 @@ import errorLogo from "../ErrorPage/error.png";
 
 const ErrorPage = () => {
     return (
-        <div>
+        <div className='flex justify-center items-center'>
             <img src={errorLogo} alt="" />
         </div>
     );
